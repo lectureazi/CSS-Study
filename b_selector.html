@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자 {css 코드} */
+
+        /* 전체 선택자 */
+        *{
+            color:red;
+        }
+        
+        /* 태그 선택자 */
+        li{
+            color: blue;
+        }
+
+        /* 클래스 선택자 */
+       .sports{
+            color:green;
+       }
+
+       #hmd{
+            color:cadetblue;
+       }
+
+       #ldy{
+            color:steelblue;
+       }
+
+    </style>
+</head>
+<body>
+    <h1>css 선택자</h1>
+    <pre>
+        CSS 선택자         : 원하는 html요소를 선택해주는 문자.
+        선택자 우선순위     : 선택자의 범위가 좁을 수록 우선순위가 높다.
+                            같은 선택자일 경우 아래 라인에 작성된 css가 적용이 된다.
+    </pre>
+
+    <h2>전체 선택자</h2>
+    <pre>문서의 모든 요소를 선택할 때 사용하는 선택자.</pre>
+    <ul>
+        <li>전체선택자1</li>
+        <li>전체선택자2</li>
+        <li>전체선택자3</li>
+    </ul>
+
+    <h2>태그 선택자</h2>
+    <pre>문서 내에 존재하는 특정 태그의 모든 요소를 선택할 때 사용하는 선택자</pre>
+    <ul>
+        <li>태그 선택자1</li>
+        <li>태그 선택자2</li>
+        <li>태그 선택자3</li>
+    </ul>
+
+    <h2>class 선택자</h2>
+    <pre>요소의 클래스 속성값으로 요소를 선택하는 선택자.</pre>
+    <ul>
+        <li class="sports">농구</li>
+        <li class="sports">배구</li>    
+    </ul>
+
+    <h2>ID 선택자</h2>
+    <pre>요소의 ID 속성값으로 요소를 선택하는 선택자.
+         ID : 식별자, ID값은 문서내에 존재하는 요소들 중에서 특정 요소를 식별하기 위해 사용함으로
+            중복된 ID 속성값을 가진 요소가 존재해서는 안된다.
+         
+    </pre>
+
+    <ul>
+        <li id="hmd" class="sports">하명도</li>
+        <li id="ldy" class="sports">이도명</li>    
+    </ul>
+
+    <pre>
+        * 태그 속성 명명규칙
+
+        1. name 속성값 : 서버에 파라미터명으로 전송되는 값. 서버에서 사용하는 프로그래밍언어의 명명규칙
+                        우리는 자바를 사용하기 때문에 camel Case를 사용하는 것이 맞다.
+
+        2. id   속성값 : css선택자로도 사용하지만, 주로 자바스크립트에서 특정 요소에 조작을 가해야할 때 사용
+                        id 속성값은 자바스크립트의 명명규칙을 주로 따릅니다. camel Case 사용.
+        
+        3. class 속성값 : BEM 명명규칙
+    </pre>
+
+</body>
+</html>

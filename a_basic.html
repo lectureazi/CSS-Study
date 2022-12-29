@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="./resources/css/css01.css" rel="stylesheet" type="text/css">
+    <!-- 
+        href : 외부 자원의 경로
+        rel  : 현재 문서외 외부 자원과의 관계
+        type : mimeType
+     -->
+
+    <style>
+        /* css선택자로 요소를 선택한 다음, css를 작성해 스타일을 변경 */
+        span{
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>CSS 작성방법 3가지</h1>
+    <b style="color:red">1. 인라인 스타일시트. 태그의 style속성으로 css를 작성</b><br>
+    <span>2. 내부스타일시트 : html의 head 태그에 style 태그를 생성해 css를 작성</span><br>
+    <b style="color:burlywood" class="outer">3. 외부스타일시트 : 외부 css파일에 css코드를 작성하고 head에 link를 통해 문서에 css를 포함시키는 방식</b>
+
+    <pre>
+        * 스타일 우선순위
+        인라인스타일시트 >>>> 내부스타일시트 >>>> 외부스타일시트
+
+        css파일에 작성한 css 내용과, 내부스타일시트로 작성한 css내용이 충돌한다면 내부스타일시트로 적용
+        내부스타일시트로 작성한 css 내용과, 인라인스타일시트로 작성한 css내용이 충돌한다면 인라인스타일시트로 적용
+    </pre>
+
+
+
+
+    
+</body>
+</html>

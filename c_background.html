@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 30px;
+            width: 300px;
+            height: 50px;
+        }
+
+        /* 배경 색상 등록 */
+        #divBg{
+            /* background-color: #bdb76b; */
+            /* background-color: bisque; */
+            /* background-color: rgb(255,0,0); */
+
+            /* rgba : rgb + alpha  투명도 지정,   1이면 완전 불투명 / 0 이면 완전 투명 */
+            background-color: rgba(255,0,0,0.8);
+        }
+
+        #divBgImg{
+            width: 1024px;
+            height: 800px;
+            border: solid;
+            background-image: url("resources/image/city1.PNG");
+
+            /* 배경사진 반복에 대한 속성 */
+            background-repeat: no-repeat;
+
+            /* 배경이미지의 크기 */
+            /* 
+                배경이미지로 요소를 모두 덮을 수 있도록 이미지를 축소/확대
+                background-size:cover;
+
+                배경이미지의 크기를 비율로 지정
+                background-size:50% 50%;
+
+                배경이미지의 크기를 고정값으로 지정
+                background-size:1024px 800px;
+
+                배경이미지가 요소안에 모두 들어오도록 이미지를 축소/확대
+                원본 배경 이미지의 비율 유지
+                background-size:contain;
+            
+            */
+
+            /* 배경이미지의 위치 */            
+            /* 
+                background-position: 50%, 50%
+            */
+
+            background-size:50% 50%;
+            background-position:50% 50%;
+        }
+
+        .div_bg-clip{
+            width: 300px;
+            height: 300px;
+            padding: 30px;
+            border: dashed;
+            border-width: 20px;
+        }
+
+        #divBgClip1{
+            background-image:  url("resources/image/city1.PNG");
+            background-clip: content-box;
+        }
+
+        #divBgClip2{
+            background-image:  url("resources/image/city1.PNG");
+            background-clip: padding-box;
+        }
+
+        #divBgClip3{
+            background-image:  url("resources/image/city1.PNG");
+            background-clip: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>배경색, 배경이미지</h1>
+    <pre>
+        색상 : 색상명, rgb, rgba, 16진수표현
+    </pre>
+    <a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">색상명참조사이트</a>
+
+    <hr>
+
+    <h2>배경 색상</h2>
+    <pre>요소의 배경색상을 지정</pre>
+    <div id="divBg"> 배경색상 </div>
+
+    <h2>배경 이미지 등록</h2>
+    <pre>
+        background-image 속성을 사용해 배경사진을 지정
+        background-repeat : 반복패턴 지정
+        background-size : 배경이미지로 사용할 이미지가 요소보다 크거나 작을 경우 요소의 크기에 맞춰 이미지를 수정하는 속성
+    </pre>
+    <div id="divBgImg">배경사진</div>
+
+    <h2>배경 적용 범위 지정</h2>
+    <pre>
+        배경이 적용될 범위를 지정할 때는 background-clip 속성을 사용한다.
+        background-clip:content-box;
+        background-clip:padding-box;
+        background-clip:border-box;
+        background-clip:text;
+    </pre>
+
+    <div class="div_bg-clip" id="divBgClip1">background-clip : content-box</div>
+    <div class="div_bg-clip" id="divBgClip2">background-clip : padding-box</div>
+    <div class="div_bg-clip" id="divBgClip3">background-clip : border-box</div>
+
+
+    
+
+
+
+</body>
+</html>

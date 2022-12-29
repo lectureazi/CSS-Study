@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            border-style: solid;
+        }
+
+        #outerDiv{
+            background-color: lightblue;            
+        }
+
+        #innerDiv{
+            background-color: lightyellow;
+        }
+
+        /* 속성선택자 */
+        input[type=checkbox]{
+            width: 50px;
+            height: 50px;
+        }
+
+        input[maxlength="10"]{
+          background-color: blue;
+          color: white;
+        }
+        
+        /* 후손요소선택자 */
+        #outerDiv h2{
+            color: purple;
+        }
+
+        /* 자식선택자 */
+        #outerDiv>h2{
+            color: lime;
+        }
+
+        /* 등위선택자 */
+        #div1+div{
+            background-color: blue;
+            color:white;
+        }
+
+        #div2~div{
+            background-color:yellow;
+            color:black;
+        }
+
+        /* 반응 선택자 */
+        #activeTest:active{
+            height: 300px;
+            color:white;
+            background-color:red;
+        }
+
+        #hoverTest:hover{
+            height: 300px;
+            color:white;
+            background-color:blue;
+        }
+
+        /* 상태 선택자 */
+
+        /* 포커스가 맞춰져 있는 요소 */
+        input:focus{
+            font-size: 30px;
+        }
+
+        /* 체크상태인 요소 */
+        input:checked{
+            width: 100px;
+            height: 100px;
+        }
+
+        option:disabled{
+            background-color: blue;
+            color:white;
+        }
+
+        option:enabled{
+            background-color: red;
+            color:white;
+        }
+
+        tr:nth-child(2n){
+            background-color: lightgreen;
+        }
+
+        tr:nth-child(2n+1){
+            background-color: lightblue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>속성 선택자</h1>
+    <pre>
+        선택자[속성=속성값]
+        ex) input[type=text]
+    </pre>
+
+    <input type="text" maxlength="10">
+    <input type="checkbox" >
+
+    <hr>
+
+    <h1>자식 선택자, 후손 선택자</h1>
+    <pre>
+        자식 선택자 >       : 자식 요소를 선택하는 선택자        
+        후손 선택자 ' '     : 후손 요소를 선택하는 선택자
+    </pre>
+
+    <div id="outerDiv">
+        <div id="innerDiv">
+            <h3>outerDiv의 후손요소, innerDiv의 자식요소</h3>
+            <h2>outerDiv의 후손요소, innerDiv의 자식요소</h2>
+            <h2>outerDiv의 후손요소, innerDiv의 자식요소</h2>
+        </div>
+        <h3>outerDiv의 자식요소</h3>
+        <h2>outerDiv의 자식요소</h2>
+        <h2>outerDiv의 자식요소</h2>
+    </div>
+
+    <h1>등위 선택자</h1>
+    <pre>
+        등위 관계에서 뒤에 위치한 요소를 선택할 때 사용하는 선택자.
+        바로 뒤의 요소를 선택 : +
+        뒤에 있는 모든 요소를 선택 : ~
+    </pre>
+
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+    <div id="div4">div4</div>
+    <div id="div5">div5</div>
+
+    <hr>
+    
+    <h1>반응 선택자</h1>
+    <pre>
+        사용자의 움직임에 따라 요소를 선택하는 선택자.  
+        1. 사용자가 클릭한 요소 선택         : 선택자:active
+        2. 사용자가 마우스를 올린 요소 선택   : 선택자:hover
+
+    </pre>
+
+    <div id="activeTest">active 테스트</div>
+    <div id="hoverTest">hover 테스트</div>
+
+    <hr>
+    <h2>상태 선택자</h2>
+    <pre>
+       입력요소의 상태에 따라 선택되는 선택자
+
+        1) 입력요소에 focus가 맞춰져 있는 경우
+        2) 입력요소가 체크 상태인 경우
+        3) 입력양식가 사용 불가능한 경우
+        4) 입력양식가 사용 가능한 경우
+    </pre>
+    
+    <label>아이디 :  <input></label> <br><br>
+    <label>비밀번호 : <input type="password"></label> <br><br>    
+    <label>14세 이상입니까?  <input type="checkbox"></label> <br><br>
+
+    <h3>당신의 연령대는?</h3>
+    <select>
+        <option disabled>연령대</option>
+        <option value="10">10대</option>
+        <option value="20">20대</option>
+        <option value="30">30대</option>
+        <option value="40">40대</option>
+    </select>
+
+    <h1>nth-child</h1>
+    <pre>
+        순서로 원하는 요소를 선택하는 선택자
+        선택자:nth-child(3)   => 선택자로 지정되는 요소들 중 3번째
+        선택자:nth-child(2n)  => 선택자로 지정되는 요소들 중에서 2n번째인 요소
+    </pre>
+
+    <table border="1">
+        <caption>과목별 수업 시간</caption>
+        <tr>
+            <td>JAVA</td>
+            <td>120시간</td>
+            <td>하명도</td>
+        </tr>
+        <tr>
+            <td>MySQL</td>
+            <td>40시간</td>
+            <td>하명도</td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>10시간</td>
+            <td>하명도</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>24시간</td>
+            <td>하명도</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>40시간</td>
+            <td>하명도</td>
+        </tr>
+        <tr>
+            <td>Spring</td>
+            <td>120시간</td>
+            <td>하명도</td>
+        </tr>
+        <tr>
+            <td>JPA</td>
+            <td>20시간</td>
+            <td>하명도</td>
+        </tr>
+    </table>
+
+
+
+
+
+</body>
+</html>
