@@ -80,6 +80,30 @@
             background-clip: border-box;
         }
 
+        /* 
+            vendor prefix
+
+            아직 웹 표준이 아닌 CSS 속성을 사용하기 위해서는
+            사용하려는 속성 앞에 vendor-prefix를 붙여줘야한다.
+
+            -webkit- : safari, chrome, edge(chromium 적용 후), opera(chromium 적용 후), android, ios 브라우저
+            -moz-   : firefox
+            -ms-    : ie, edge(chromium 적용전)
+            -o-     : opera(chromium 적용전)
+        */
+
+        #divBgClip4{
+            background-image: url('https://www.thedailypost.kr/news/photo/201907/70294_61167_1033.png');
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -ms-background-clip: text;
+            -o-background-clip :text;
+            background-clip: text;
+            font-size: 8vw;
+            font-weight: 900;
+            color:transparent;
+        }
+
     </style>
 </head>
 <body>
@@ -115,7 +139,7 @@
     <div class="div_bg-clip" id="divBgClip1">background-clip : content-box</div>
     <div class="div_bg-clip" id="divBgClip2">background-clip : padding-box</div>
     <div class="div_bg-clip" id="divBgClip3">background-clip : border-box</div>
-
+    <div class="div_bg-clip" id="divBgClip4">background<br>-clip : text</div>
 
     
 

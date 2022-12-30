@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: lightyellow;
+        }
+
+        .dotted{
+            border-radius: 100%;
+            border-color: blue;
+        }
+
+        .groove{
+            border-top-left-radius: 100%;
+            /* 요소 그림자 설정 
+
+                x-offset, y-offset, blur, spread
+            */
+
+            box-shadow: 5px 5px 3px 3px gray;
+        }
+
+        input[name="flower"]:checked+label>img{
+           border-style: solid;
+           border-color: red;
+           border-width: 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>테두리 스타일</h1>
+    <h2>border-style:solid</h2>
+    <div class="solid" style="border-style: solid;"></div>
+
+    <h2>border-style:none</h2>
+    <div class="none" style="border-style: none;"></div>
+
+    <h2>border-style:dotted</h2>
+    <div class="dotted" style="border-style: dotted;"></div>
+
+    <h2>border-style:groove</h2>
+    <div class="groove" style="border-style: groove;"></div>
+
+    <h2>border-style:inset</h2>
+    <div class="inset" style="border-style: inset;"></div>
+
+    <h2>border-style:outset</h2>
+    <div class="outset" style="border-style: outset;"></div>
+
+    <h2>border-style:double</h2>
+    <div class="double" style="border-style: double;"></div>
+
+    <form>
+        <h4>꽃</h4>
+
+        <input type="checkbox" value="cherry" id="cherry" name="flower" style="display: none;">
+        <label for="cherry" >
+            <img src="./resources/image/flower1.PNG" width="50" height="50" style="border-radius: 100%">
+        </label>
+       
+        <input type="checkbox" value="dandelion" id="dandelion" name="flower" style="display: none;">
+        <label for="dandelion" >
+            <img src="./resources/image/flower4.PNG" width="50" height="50"  style="border-radius: 100%">
+        </label>
+       
+        <input type="checkbox" value="forsythia" id="forsythia" name="flower" style="display: none;">
+        <label for="forsythia" >
+            <img src="./resources/image/flower3.PNG" width="50" height="50"  style="border-radius: 100%">
+        </label>
+
+        <input type="submit">
+    </form>
+
+    
+</body>
+</html>

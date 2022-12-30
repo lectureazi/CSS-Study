@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./resources/css/common.css" rel="stylesheet" type="text/css">
+    <style>
+        /* font의 종류, font 두께, font 스타일, font 크기 지정 */
+
+        p{
+            font-size: 90px;
+            line-height: 2;
+        }
+
+        div>p{
+            /* font-family: "궁서";
+            font-weight: 900;
+            font-style: italic;
+            font-size: 5vw;
+            line-height:2;
+            font-variant: small-caps; */
+
+            /* font : [style variant weight] size/line-height family */
+            font:italic small-caps 900 5vw/1 "궁서";
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 
+        css의 단위에는 절대길이 단위와 상대길이 단위로 나뉜다.
+        
+        절대길이 : px(1/96 inch),  pt, cm, mm
+        상대길이 : 단위 값이 특정 요소의 크기에 의해 변경되는 단위
+                vw : viewport width % 단위, 1vw = 브라우저 너비의 1%
+                     * viewport : 사용자가 보고있는 화면의 크기, 브라우저 창의 가로길이.
+                vh : viewport height % 단위, 1vh = 브라우저 높이의 1%
+                em(equal m) : 요소 폰트의 m의 크기를 기준으로 사용하는 단위
+                ex(equal x) : 요소 폰트의 x의 크기를 기준으로 사용하는 단위
+                rem(root equal m)  : 루트 요소(<html>) 폰트의 'm' 크기를 기준으로 사용하는 단위
+                
+                , * 브라우저의 기본 폰트 크기: 16px, 12pt
+     -->
+     
+     <p  class="font-xs">font-xs</p>
+     <p  class="font-sm">font-sm</p>
+     <p  class="font-base">font-base</p>
+     <p  class="font-lg">font-lg</p>
+     <p  class="font-xl">font-xlg</p>
+
+     <p>CSS Font 속성</p>
+     <div>
+        <p>CSS Font 속성</p>
+        <p>CSS Font 속성</p>
+     </div>
+    
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{
+            background-color: lightyellow;
+        }
+
+        .contain{
+            object-fit: contain;
+        }
+
+        .cover{
+            object-fit: cover;
+        }
+
+        .fill{
+            object-fit: fill;
+        }
+
+        .none{
+            object-fit: none;
+        }
+
+        .scale-down{
+            object-fit: scale-down;
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="./resources/image/city1.PNG" alt="이탈리아 로마의 풍경">
+    <img src="https://dimg.donga.com/wps/SPORTS/IMAGE/2021/09/16/109285971.1.jpg" alt="마흔 네살 원빈">
+
+    
+    <h3>이미지 크기 : object-fit</h3>
+    <pre>
+        object-fit:contain          
+                이미지의 비율을 유지하면서 img요소 내부에 들어가도록 크기를 수정, img요소의 비율과 원본 이미지의 비율이 같지 않으면 공간이 남는다.
+       
+         object-fit:cover
+                이미지의 비율을 유지하면서 img요소를 가득 채운다. 요소와 원본이미지의 비율이 같지않으면 이미지가 일부 잘린다.       
+         
+        object-fit:fill           
+                img 요소의 크기에 맞춰 이미지의 크기를 조절한다. 원본 이미지의 비율을 유지하지 않는다.  
+
+        object-fit:none    
+                이미지의 크기를 조절하지 않고 가운데 배치
+
+        object-fit:scale-down       
+                none, contain 중에서 크기가 변경된 이미지 값이 작은 것을 선택한다.
+    </pre>
+    <img class="contain"    src="./resources/image/flower1.PNG" width="650" height="150">
+    <img class="cover"      src="./resources/image/flower2.PNG" width="650" height="150">
+    <img class="fill"       src="./resources/image/flower3.PNG" width="650" height="150">
+    <img class="none"       src="./resources/image/flower4.PNG" width="650" height="150">
+    <img class="scale-down" src="./resources/image/flower5.PNG" width="650" height="150">
+
+    <h3>이미지 위치 : object-position</h3>
+    <img class="scale-down"  style="object-position: 50% 50%;" src="./resources/image/flower5.PNG" width="650" height="650">
+    <img class="scale-down"  style="object-position:100% 100%;" src="./resources/image/flower5.PNG" width="650" height="650">
+    <img class="scale-down" style="object-position:300px 300px;" src="./resources/image/flower5.PNG" width="650" height="650">
+
+</body>
+</html>

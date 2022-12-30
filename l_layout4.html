@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./resources/css/common.css" rel="stylesheet" type="text/css">
+    <style>
+        div{
+            background-color: skyblue;
+        }
+
+        .wrap>div{
+            width: 200px;
+            height: 50px;
+            float: left;
+            position: relative;
+        }
+        
+        .wrap:hover .horize_2{
+            transition-duration: 1s;
+            transform: translateX(-50%);
+        }    
+
+        .wrap:hover .horize_3{
+            transition-delay: 1s;
+            transition-duration: 1s;
+            transform: translateX(-100%);
+        }    
+
+        .wrap:hover .horize_4{
+            transition-delay: 2s;
+            transition-duration: 1s;
+            transform: translateX(-150%);
+        }    
+
+        .wrap:hover .horize_5{
+            transition-delay: 3s;
+            transition-duration: 1s;
+            transform: translateX(-200%);
+        }    
+
+
+    </style>
+</head>
+<body>
+
+    <h1>z-index</h1>
+    <pre>
+        z-index : 요소의 z축을 지정
+        position:static 에서는 사용할 수 없음.
+
+        html 요소가 쌓이는 맥락
+
+        1. 브라우저가 먼저 랜더링하는 요소가 낮은 z축값을 가진다.
+            * 부모요소가 자식요소보다 z축이 낮다.
+            * 형제요소라면 코드라인상으로 먼저 작성된 요소가 나중에 작성된 요소보다 z축이 낮다.
+            * position 속성값이 지정된 요소가 position 속성이 지정되지 않은 요소보다 z축이 높다.
+              position 속성이 지정되지 않은 요소를 브라우저가 먼저 랜더링한다.
+
+        z-index를 사용해 특정 요소를 상단에 배치하고 싶다면, z-index 값을 아주 크게 잡는게 좋다.
+    </pre>
+
+    <h2>z-index 적용 전</h2>
+    <div class="wrap clear">
+        <div class="horize_1" style="background-color: red; ">horize_1</div>
+        <div class="horize_2" style="background-color: yellow; ">horize_2</div>
+        <div class="horize_3" style="background-color: green;">horize_3</div>
+        <div class="horize_4" style="background-color: blue;">horize_4</div>
+        <div class="horize_5" style="background-color: pink; ">horize_5</div>
+    </div>
+
+    <div class="wrap clear">
+        <div class="horize_1" style="background-color: red;    z-index: 500;">horize_1</div>
+        <div class="horize_2" style="background-color: yellow; z-index: 400;">horize_2</div>
+        <div class="horize_3" style="background-color: green;  z-index: 300;">horize_3</div>
+        <div class="horize_4" style="background-color: blue;   z-index: 200;">horize_4</div>
+        <div class="horize_5" style="background-color: pink;   z-index: 100;">horize_5</div>
+    </div>
+    
+</body>
+</html>

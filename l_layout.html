@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: yellow;
+        }
+
+        span{
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        HTML Elements의 화면상 분류
+        1. 화면에 표시가 되지 않는 요소 : <head>, <meta>, <style>
+        2. 화면에 표시가 되는 태그
+            2-1 : block level element (display 속성의 기본 값이 block)
+                    1. 한 줄에 한 요소만 위치할 수 있다.
+                         블록요소는 너비 영역은 부모요소의 너비와 일치한다.
+                         만약 블록요소의 너비를 width를 사용해 지정할 경우, 나머지 남은 영역은 margin으로 잡는다.
+                    
+                    2. 요소의 크기를 지정할 수 있다. (width, height 를 사용할 수 있다.)
+                    3. margin 영역을 상하좌우 모두 가질 수 있다.
+            
+            2-2 : inline level element (display 속성의 기본 값이 inline)
+                    1. 한 줄에 여러 요소가 위치할 수 있다.
+                    2. 요소의 크기를 지정할 수 없다. (width, height 속성을 사용할 수 없다.)
+                    3. margin은 쓰기 방향에 대해서만 지정할 수 있다. (좌,우)
+
+        
+        block요소와 inline요소는 display 속성의 값에 따라 결정되는데
+        display 속성값은 바꿀 수 있다.
+     -->
+
+     <h1>block/inline element 의 영역과 크기</h1>
+
+     <h2>1. block/inline elemet의 영역</h2>
+     <div>
+        block요소는 너비가 부모 요소의 너비와 동일하고, <br>높이는 컨텐츠의 높이와 동일하다.
+     </div>
+     <div>
+        block요소는 너비가 부모 요소의 너비와 동일하고, <br>높이는 컨텐츠의 높이와 동일하다.
+     </div>
+     <span>
+        inline 요소는 너비가 컨텐츠의 너비와 동일하고 
+        높이는 컨텐츠의 높이와 동일하다.
+     </span>
+     <span style="background-color: blue; color: white;">
+        *** inline element ***
+     </span>
+
+     <h2>2. block/inline elemet의 크기</h2>
+
+     <div style="width: 30%; height: 200px;">
+        block 요소는 width와 height 속성을 사용할 수 있다.
+     </div>
+
+     <span style="width: 30000%; height: 20000px;">
+        inline 요소는 width와 height 속성을 사용할 수 없다.
+     </span>
+
+     <h2>3. block/inline element의 margin</h2>
+     <pre>
+        margin : 요소와 요소 사이의 간격, 여백
+         ** 마진 상쇄 : 두 요소의 margin-top과 margin-bottom이 인접할 경우 두 요소중 마진 값이 큰 요소의 마진만 적용
+     </pre>
+
+     <div style="margin: 10px 5px 10px 5px;">
+        블록요소의 마진은 상하좌우 모두 적용된다.
+     </div>
+     <div style="margin: 10px 5px 10px 5px;">
+        블록요소의 마진은 상하좌우 모두 적용된다. 
+    </div>
+
+     <span style="margin: 10px 5px 10px 5px;">
+        인라인요소의 마진은 좌우만 적용된다.
+    </span>  
+    <span style="margin: 10px 5px 10px 5px;">
+        인라인요소의 마진은 좌우만 적용된다.
+    </span>  
+    <span style="margin: 10px 5px 10px 5px;">
+        인라인요소의 마진은 좌우만 적용된다.
+    </span>  
+    <span style="margin: 10px 5px 10px 5px;">
+        인라인요소의 마진은 좌우만 적용된다.
+    </span>  
+
+    <div style="padding: 10px 5px 10px 5px;">
+        padding은 인라인/블록 모두 잘 적용 된다.
+    </div>
+     <div style="padding: 10px 5px 10px 5px;">
+        padding은 인라인/블록 모두 잘 적용 된다.
+    </div>
+    
+     <span style="padding: 10px 5px 10px 5px;">
+        padding은 인라인/블록 모두 잘 적용 된다.
+    </span>  
+    <span style="padding: 10px 5px 10px 5px;">
+        padding은 인라인/블록 모두 잘 적용 된다.
+    </span>  
+    <span style="padding: 10px 5px 10px 5px;">
+        padding은 인라인/블록 모두 잘 적용 된다.
+    </span>  
+    <span style="padding: 10px 5px 10px 5px;">
+        padding은 인라인/블록 모두 잘 적용 된다.
+    </span>  
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

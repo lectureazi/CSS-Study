@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #ksi{
+            float:right;
+        }
+
+        .poem{
+            background-color: lightyellow;
+            overflow: hidden; 
+        }
+
+     
+    </style>
+</head>
+<body>
+    <h1>float 속성</h1>
+    <div class="poem">
+        <div class="wrap_img">
+            <img id="ksi" src="http://ojsfile.ohmynews.com/STD_IMG_FILE/2012/1201/IE001522943_STD.jpg" alt="김승일"> 
+        </div>
+        <pre>
+            나의 자랑 이랑 / 김승일
+            
+            너와 나는 여섯 종류로
+            인간들을 분류했지
+            선한 사람, 악한 사람......
+            대단한 발견을 한 것 같아
+            막 박수 치면서,
+            네가 나를 선한 사람에
+            끼워주기를 바랐지만.
+            막상 네가 나더러 선한 사람이라고 했을 때. 나는 다른 게 되고 싶었어. 이를테면
+            너를 자랑으로 생각하는 사람.
+            나로 인해서,
+            너는 누군가의 자랑이 되고
+            어느 날 네가 또 슬피 울 때, 네가 기억하기를
+            네가 나의 자랑이란걸
+            기억력이 좋은 네가 기억하기를,
+            바라면서 나는 얼쩡거렸지.
+        </pre>
+    </div>
+
+    <pre>
+        float이 지정된 요소는 normal-flow에서 제외 되기 때문에 다른 요소들이 float이 지정된 요소의 높이를 알 수 없다.
+        이런 문제를 해결하기 위해서는 float의 선조 요소들 중 하나를 bfc로 만들어주면 된다.
+
+        bfc : 블록서식맥락
+        bfc 인 요소는 플로팅 요소의 상호작용 범위를 결정해야하기 때문에 float이 적용된 요소의 높이를 알고 있다.
+        따라서 만약 bfc인 요소의 후손 요소 중 float이 지정된 요소가 가장 높이가 크다면,
+        bfc인 요소의 높이는 float된 요소의 높이를 따라가게 된다.
+
+        * bfc 요소의 종류 *
+
+        문서의 루트 요소(<html>).
+        플로팅 요소(float이 none이 아님).
+        절대 위치를 지정한 요소(position이 absolute 또는 fixed).
+        인라인 블록(display가 inline-block).
+        표 칸(display가 table-cell, HTML 표 칸의 기본값).
+        표 주석(display가 table-caption, HTML 표 주석의 기본값).
+        display가 table, table-row, table-row-group, table-header-group, table-footer-group (HTML 표에서, 각각 표 전체, 행, 본문, 헤더, 푸터의 기본값) 또는 inline-table인 요소가 암시적으로 생성한 무명 칸.
+        overflow가 visible이 아닌 블록 요소.
+        display가 flow-root.
+        contain이 layout, content, paint.
+        스스로 플렉스, 그리드, 테이블 컨테이너가 아닌 경우의 플렉스 항목(display가 flex 또는 inline-flex인 요소의 바로 아래 자식)
+        스스로 플렉스, 그리드, 테이블 컨테이너가 아닌 경우의 그리드 항목(display가 grid 또는 inline-grid인 요소의 바로 아래 자식)
+        다열 컨테이너(column-count (en-US) 또는 (column-width (en-US)가 auto가 아닌 경우. column-count: 1 포함).
+        column-span (en-US)이 all인 경우. 해당하는 요소가 다열 컨테이너 안에 위치하지 않아도 항상 새로운 블록 서식 맥락을 생성해야 합니다. (명세 변경, Chrome 버그)
+
+    </pre>
+
+
+
+</body>
+</html>

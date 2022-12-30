@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            margin:10px 0 10px 0;
+            width:100px;
+            height:100px;
+            background-color: red;
+            border:solid;
+        }
+
+        /* 
+            1. transition-duration : 트랜지션이 동작하는 시간
+            2. transition-delay    : 트랜지션이 시작하기 까지 걸리는 시간
+            3. transition-timing-function : 트랜지션의 변화 속도를 설정
+                linear: 시작부터 종료까지 동일한 속도
+                ease : 초반은 느리게, 중반은 빠르게, 종료시점 다시 느리게
+                ease-in : 시작 지점의 변화가 느리게
+                ease-out :  종료 지점의 변화가 느리게
+                ease-in-out : 시작지점과 종료지점의 변화가 천천히 진행
+            
+            4. transition-property : 트랜지션이 적용되어야 하는 속성을 명시적으로 지정
+                                     만약 이 속성이 없으면, 해당 요소의 모든 속성이 트랜지션 대상이 된다.
+        
+        */
+
+        .tran1:hover{
+            background-color: yellow;
+            transition-duration: 2s;
+        }
+
+        .tran2:hover{
+            transition-duration: 10s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in-out;
+            transform:rotate(3600deg);
+            background-color: blue;
+        }
+
+        .tran3:hover{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: white;
+            transform: skew(350deg, 350deg);
+
+            transition-property: background-color, transform;
+            transition-duration: 2s, 4s;
+        }
+
+        input[name="flower"]:checked+label>img{
+           border-style: solid;
+           border-color: lightblue;
+           border-width: 5px;
+        }
+
+        .label_flower>img:hover{
+            transform:translateY(-5px);
+            transition-property: transform;
+            transition-duration: 0.5s;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>트랜지션</h1>
+    <p>요소의 속성 변화가 시간에 따라 조금씩 변화하는 것을 의미한다.</p>
+
+    <h2>트랜지션 적용</h2>
+    <div class="tran1"></div>
+    <div class="tran2"></div>
+    <div class="tran3">tran3</div>
+
+    <form>
+        <h4>꽃</h4>
+
+        <input type="checkbox" value="cherry" id="cherry" name="flower" style="display: none;">
+        <label for="cherry" class="label_flower">
+            <img src="./resources/image/flower1.PNG" width="50" height="50" style="border-radius: 100%">
+        </label>
+       
+        <input type="checkbox" value="dandelion" id="dandelion" name="flower" style="display: none;">
+        <label for="dandelion" class="label_flower">
+            <img src="./resources/image/flower4.PNG" width="50" height="50"  style="border-radius: 100%">
+        </label>
+       
+        <input type="checkbox" value="forsythia" id="forsythia" name="flower" style="display: none;">
+        <label for="forsythia" class="label_flower">
+            <img src="./resources/image/flower3.PNG" width="50" height="50"  style="border-radius: 100%">
+        </label>
+
+        <input type="submit">
+    </form>
+
+</body>
+</html>
