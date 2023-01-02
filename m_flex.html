@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .item{
+            width: 100px;
+            height: 50px;
+        }
+
+        .con{
+            display: flex;
+        }
+
+        .inline_con{
+            display: inline-flex;
+        }
+
+        .row{
+            flex-direction: row;
+        }
+
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .column-reverse{
+            flex-direction: column-reverse;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>flex container</h1>
+    <pre>
+        Container는 정렬할 요소(item)을 감싸는 부모요소.
+        display:flex, display:inline-flex 지정을 통해 해당 요소를 Container로 만들 수 있다.
+        
+        display:flex: block 요소의 특징을 지니는  Container
+        display:inline-flex : inline 요소의 특징을 지니는 Container
+    </pre>
+
+    <h2>1. display:flex</h2>
+    <div class="con">
+        <div class="item" style="background-color: pink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: blue;"></div>
+    </div>
+    <div class="con">
+        <div class="item" style="background-color: pink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: blue;"></div>
+    </div>
+
+    <h2>2. display:inline-flex</h2>
+    <div class="inline_con">
+        <div class="item" style="background-color: pink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: blue;"></div>
+    </div>
+
+    <div class="inline_con">
+        <div class="item" style="background-color: pink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: blue;"></div>
+    </div>
+
+    <h2>3. item들의 정렬방향을 지정</h2>
+    <h3>3-1. flex-direction:row  :  좌->우</h3>
+    <div class="con row">
+        <div class="item" style="background-color: pink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: blue;"></div>
+    </div>
+
+    <h3>3-1. flex-direction:row-reverse  :  우->좌</h3>
+    <div class="con row-reverse">
+        <div class="item" style="background-color: pink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: blue;"></div>
+    </div>
+
+    <h3>3-1. flex-direction:column  :  상->하</h3>
+    <div class="con column">
+        <div class="item" style="background-color: pink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: blue;"></div>
+    </div>
+
+    <h3>3-1. flex-direction:column  :  하->상</h3>
+    <div class="con column-reverse">
+        <div class="item" style="background-color: pink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: blue;"></div>
+    </div>
+
+
+
+
+
+</body>
+</html>
