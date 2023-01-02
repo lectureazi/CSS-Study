@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .con{
+            display: flex;
+            height: 200px;
+            border-style: solid;
+            flex-wrap: wrap;
+        }
+
+        .item{
+            width: 50%;
+            height: 50px;
+        }
+
+        .flex-start{
+            align-content: flex-start;
+        }
+
+        .flex-end{
+            align-content: flex-end;
+        }
+
+        .center{
+            align-content: center;
+        }
+
+        .space-between{
+            align-content: space-between;
+        }
+
+        .space-around{
+            align-content: space-around;
+        }
+
+        .stretch{
+            align-content: stretch;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>container : align-content, item을 여러 줄로 표현할 때 (flex-wrap:wrap, wrap-reverse) 아이템들의 교차축 정렬 방식을 지정</h1>
+
+    <h2>1. align-content:flex-start(default)</h2>
+    <div class="con flex-start">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+    <h2>2. align-content:flex-end(default)</h2>
+    <div class="con flex-end">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+    <h2>3. align-content:center</h2>
+    <div class="con center">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+    <h2>3. align-content:space-between</h2>
+    <div class="con space-between">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+    <h2>4. align-content:stretch</h2>
+    <div class="con stretch">
+        <div style="background-color: lightpink;    width: 50%;  ">1</div>
+        <div style="background-color: red;          width: 50%;  ">2</div>
+        <div style="background-color: lightyellow;  width: 50%;  ">3</div>
+        <div style="background-color: lightgreen;   width: 50%;  ">4</div>
+        <div style="background-color: lightblue;    width: 50%;  ">5</div>
+    </div>
+
+
+</body>
+</html>

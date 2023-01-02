@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            width: 50%;
+            /* height 선조 요소 중 고정값이 지정된 요소가 있고 모든 선조에 height 속성이 명시적으로 지정되어 있아야 %를 사용할 수 있다. */
+            /* height: 50px; */
+            height: 50px;
+        }
+
+        .con{
+            display: flex;
+        }
+
+        .wrap{
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse{
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+    <h1>container flex-wrap 속성</h1>
+
+    <h2>1. flex-wrap:nowrap  줄바꿈 하지 않음 (default)</h2>
+
+    <div class="con">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+
+    <h2>2. flex-wrap:wrap  줄바꿈 사용 </h2>
+
+    <div class="con wrap">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+    <h2>2. flex-wrap:wrap-reverse  역방향으로 줄바꿈 사용 </h2>
+
+    <div class="con wrap-reverse">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+
+
+</body>
+</html>

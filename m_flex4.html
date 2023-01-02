@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            width: 150px;
+            height: 50px;
+        }
+
+        .con{
+            display:flex;
+            height: 150px;
+            border-style: solid;
+        }
+
+        .flex-start{
+            align-items: flex-start;
+        }
+
+        .flex-end{
+            align-items: flex-end;
+        }
+
+        .center{
+            align-items: center;
+        }
+
+
+        /* float과 flex 비교 */
+
+        .test-flex-middle{
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content{
+            height: 150px;
+            border-style: solid;
+        }
+
+        .wrap_color{
+            position: relative;
+            width: 750px;
+            left: 50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+        }
+        
+        .wrap_color::after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+
+        .wrap_color>div{
+            width: 150px;
+            height: 50px;
+            float: left;
+        }
+
+        .baseline{
+            align-items: baseline;
+        }
+
+        .stretch{
+            align-items: stretch;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>container : align-items, 교차축에 대한 정렬방식을 지정</h1>
+
+    <h2>1. align-items:flex-start(default)</h2>
+    <div class="con flex-start">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+    <h2>2. align-items:flex-end</h2>
+    <div class="con flex-end">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+    <h2>3. align-items:center</h2>
+    <div class="con center">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+    <h2>4. align-items:baseline</h2>
+    <div class="con baseline">
+        <div class="item" style="background-color: lightpink; height: 50px; line-height: 250px">1</div>
+        <div class="item" style="background-color: red; height: 100px; line-height: 200px" >2</div>
+        <div class="item" style="background-color: lightyellow; height: 150px; line-height: 150px">3</div>
+        <div class="item" style="background-color: lightgreen; height: 200px; line-height: 100px">4</div>
+        <div class="item" style="background-color: lightblue; height: 250px; line-height: 50px">5</div>
+    </div>
+
+    <!-- stretch: item에 height값이 지정되어있으면 무시 -->
+    <h2>5. align-items:stretch</h2>
+    <div class="con" style="align-items: stretch;">
+        <!-- div태그안의 텍스트 높이가 line-height값을 따라간다. -->
+        <div style="background-color: lightpink;    width: 150px;  line-height:50px">1</div>
+        <div style="background-color: red;          width: 150px;  line-height:100px">2</div>
+        <div style="background-color: lightyellow;  width: 150px;  line-height:150px">3</div>
+        <div style="background-color: lightgreen;   width: 150px;  line-height:200px">4</div>
+        <div style="background-color: lightblue;    width: 150px;  line-height:250px">5</div>
+     </div>
+
+
+    <h2>부모요소의 정 가운데 자식요소를 배치해보자.</h2>
+    <h3>1. flex</h3>
+    <div class="con test-flex-middle">
+        <div class="item" style="background-color: lightpink;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: lightyellow;"></div>
+        <div class="item" style="background-color: lightgreen;"></div>
+        <div class="item" style="background-color: lightblue;"></div>
+    </div>
+
+    <h3>2. float</h3>
+    <div class="content">
+        <div class="wrap_color">
+            <div  style="background-color: lightpink;"></div>
+            <div  style="background-color: red;"></div>
+            <div  style="background-color: lightyellow;"></div>
+            <div  style="background-color: lightgreen;"></div>
+            <div  style="background-color: lightblue;"></div>
+        </div>
+    </div>
+
+</body>
+</html>
